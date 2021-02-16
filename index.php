@@ -7,6 +7,7 @@ $url = (isset($_GET['url'])) ? $_GET['url'] : 'index.php';
  *  sendo a $key a url informada
  *  e o $value o caminho do arquivo
  */
+
 $router = array(
     'teste/' => 'Controllers/TesteControllers.php',
     'contato/' => 'Controllers/ContatoController.php',
