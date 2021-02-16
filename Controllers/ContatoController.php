@@ -1,13 +1,12 @@
 <?php
 
 require "Models/ContatoModel.php";
+require "Models/View.php";
+
+$view = new View();
 
 $contatoModel = new ContatoModel();
 
-global $testeModelo;
-$testeModelo = $contatoModel;
+$view->renderView( $contatoModel->user(), "Resource/View/contato.php");
 
-// public function RenderView ([ 'variavel' => 'valor, objeto, array' ], 'namespace_view')
-
-require "Resource/View/TesteView.php";
 

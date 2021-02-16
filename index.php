@@ -12,7 +12,8 @@ $dir = __DIR__."/Controllers/";
  */
 $router = [
     'teste/' => 'TesteControllers.php',
-    'contato/' => 'ContatoController.php'
+    'contato/' => 'ContatoController.php',
+    'empresa/' => 'EmpresaController.php'
 ];
 
 //verifica se o url informada tem uma rota definida se tiver passa a rota se não passa a rota não encontrada

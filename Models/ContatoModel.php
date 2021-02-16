@@ -2,8 +2,14 @@
 
 class ContatoModel {
 
-    public function testeModelo ()
+
+    public function user ()
     {
-        return "deu certo";
+
+        return [
+            'nome' => 'Renan Teotonio',
+            'telefone' => '65054645656',
+            'email' => 'teste@teste.com'
+        ];
     }
 }
