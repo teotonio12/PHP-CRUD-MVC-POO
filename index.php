@@ -21,3 +21,5 @@ $controller = array_key_exists ( $url ,$router ) ?  $dir.$router[$url] :  "404.p
 
 //chama a rota
 require $controller;
+
+//teste
