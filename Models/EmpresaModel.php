@@ -21,10 +21,6 @@ class EmpresaModel {
        $empresas = $stmt->fetch(\PDO::FETCH_ASSOC);
        
         return $empresas;
-        // [
-        //     'razao' => 'Comercio',
-        //     'cnpj' => '51354315153',
-        //     'contato' => 'teste@testes.com'
-        // ];
+      
     }
 }
