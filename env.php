@@ -2,6 +2,8 @@
 
 namespace Env;
 
+require "Config/config.php";
+
 class Conn {
 
     private $host;
