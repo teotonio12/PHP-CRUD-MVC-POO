@@ -3,7 +3,6 @@
 //pega a rota informa, caso não tenha sido set o index.php
 $url = (isset($_GET['url'])) ? $_GET['url'] : 'index.php';
 
-
 $dir = __DIR__."/Controllers/";
 
 /** define todas as rotas 
@@ -21,5 +20,3 @@ $controller = array_key_exists ( $url ,$router ) ?  $dir.$router[$url] :  "404.p
 
 //chama a rota
 require $controller;
-
-//teste

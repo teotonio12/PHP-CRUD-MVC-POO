@@ -2,7 +2,6 @@
 
 class ContatoModel {
 
-
     public function user ()
     {
 

@@ -2,7 +2,6 @@
 
 class EmpresaModel {
 
-
     public function empresa ()
     {
 
