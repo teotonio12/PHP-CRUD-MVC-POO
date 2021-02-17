@@ -6,9 +6,8 @@ class View {
     
     public function renderView ( array $variaveis, string $namespaceView)
     { 
-        
-       $this->namespaceViewExists($namespaceView);
-
+       $this->verificaErrorNamespaceView($namespaceView);
+       
        $this->createVariable($variaveis,$namespaceView);
 
     }
@@ -31,8 +30,14 @@ class View {
         if (!file_exists($namespaceView)) throw new \Exception("Arquivo não encontato", "404");
     }
 
-    public function teste (ContatoModel $contatoModel){
-        
+    public function verificaErrorNamespaceView ($namespaceView):Void
+    {
+        try {
+            $this->namespaceViewExists($namespaceView);
+       } catch (\Exception $e) {
+           echo $e->getMessage();
+           die;
+       } 
     }
 
 }   
