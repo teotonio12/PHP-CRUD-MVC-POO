@@ -13,10 +13,10 @@ class Conn {
 
     public function __construct()
     {
-        $this->host = "localhost";
-        $this->dbname = "testdb";
-        $this->user = "root";
-        $this->senha = "";
+        $this->host = HOST;
+        $this->dbname = DBNAME;
+        $this->user = USER;
+        $this->senha = SENHA;
 
     }
 
