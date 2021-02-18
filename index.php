@@ -14,8 +14,16 @@ $dir = __DIR__."/Controllers/";
  *  e o $value o caminho do arquivo
  */
 $router = [
-    'empresa' => 'EmpresaControllers@create',
-    'user' => 'UserControllers@create'
+    'empresa-create' =>   'EmpresaControllers@create',
+    'empresa-delete' =>   'EmpresaControllers@delete',
+    'empresa-update' =>   'EmpresaControllers@update',
+    'empresa-listall' =>  'EmpresaControllers@listAll',
+    'empresa-listshow' => 'EmpresaControllers@listShow',
+    'user-create' =>      'UserControllers@create',
+    'user-delete' =>      'UserControllers@delete',
+    'user-update' =>      'UserControllers@update',
+    'user-listall' =>     'UserControllers@listAll',
+    'user-listshow' =>    'UserControllers@listShow'
 ];
 
 
@@ -25,4 +33,4 @@ global $rota;
 $rota = array_key_exists ( $controller ,$router ) ?  $router[$controller] :  "404.php";
 
 //chama a rota
-require "boostrap/app.php";
+require "bootstrap/app.php";

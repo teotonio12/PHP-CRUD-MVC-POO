@@ -1,6 +1,5 @@
 <?php
 
-namespace Config;
 
 require "env.php";
 

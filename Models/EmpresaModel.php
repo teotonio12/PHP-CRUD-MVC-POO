@@ -1,9 +1,5 @@
 <?php
 
-namespace Models;
-
-use Models\BaseModels;
-
 require "Models/BaseModels.php";
 
 class EmpresaModel extends BaseModels 

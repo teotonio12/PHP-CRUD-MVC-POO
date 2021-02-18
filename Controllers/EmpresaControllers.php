@@ -1,20 +1,39 @@
 <?php
 
-namespace Controllers;
-
-use Models\EmpresaModel;
-
 require "Models/EmpresaModel.php";
 
-#recebe os dados para cadastrar
-$dados = [
-    '100',
-    'Cometa',
-    '142424543435',
-    'cometa@teste'
-];
+class EmpresaControllers 
+{
 
-$empresaModels = new EmpresaModel();
+    private $empresaModels;
+    
+    public function __construct()
+    {
+        $this->empresaModels = new EmpresaModel();
+    }
 
+    public function create($request)
+    {  
+        echo $this->empresaModels->create($this->empresaModels->tabela,$this->empresaModels->colunas,$request);
+    }
 
-echo $empresaModels->$metodo($empresaModels->tabela,$empresaModels->colunas,$dados);
+    public function update($request)
+    {
+        echo $this->empresaModels->update($this->empresaModels->tabela,$this->empresaModels->colunas,$request);
+    }
+
+    public function delete($request)
+    {
+        echo $this->empresaModels->delete($this->empresaModels->tabela,$this->empresaModels->colunas,$request);
+    }
+
+    public function listAll($request)
+    {
+        echo $this->empresaModels->listAll($this->empresaModels->tabela,$this->empresaModels->colunas,$request);
+    }
+
+    public function listShow($request)
+    {
+        echo $this->empresaModels->listShow($this->empresaModels->tabela,$this->empresaModels->colunas,$request);
+    }
+}
