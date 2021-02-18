@@ -2,7 +2,7 @@
 
 $uri = explode('@',$rota);
 
-$file = "Controllers/".$uri[0].".php";
+$file = "App/Controllers/".$uri[0].".php";
 $class = $uri[0];
 $metodo = $uri[1];
 

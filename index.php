@@ -7,7 +7,7 @@ $uri = explode('/', $url);
 
 $controller = $uri[0];
 
-$dir = __DIR__."/Controllers/";
+$dir = __DIR__."/App/Controllers/";
 
 /** define todas as rotas 
  *  sendo a $key a url informada
@@ -33,4 +33,4 @@ global $rota;
 $rota = array_key_exists ( $controller ,$router ) ?  $router[$controller] :  "404.php";
 
 //chama a rota
-require "bootstrap/app.php";
+require "App/bootstrap/app.php";

@@ -1,8 +1,9 @@
 <?php
 
-require "Models/EmpresaModel.php";
+require "App/Models/EmpresaModel.php";
+require "App/Controllers/CreateSql.php";
 
-class EmpresaControllers 
+class EmpresaControllers extends CreateSql
 {
 
     private $empresaModels;
@@ -14,7 +15,9 @@ class EmpresaControllers
 
     public function create($request)
     {  
-        echo $this->empresaModels->create($this->empresaModels->tabela,$this->empresaModels->colunas,$request);
+        $sql = $this->sqlCreate($this->empresaModels->tabela,$this->empresaModels->colunas); 
+
+        echo $this->empresaModels->create($sql ,$request);
     }
 
     public function update($request)
@@ -36,4 +39,5 @@ class EmpresaControllers
     {
         echo $this->empresaModels->listShow($this->empresaModels->tabela,$this->empresaModels->colunas,$request);
     }
+
 }

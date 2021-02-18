@@ -1,6 +1,6 @@
 <?php
 
-require "Models/UserModel.php";
+require "App/Models/UserModel.php";
 
 class UserControllers 
 {
