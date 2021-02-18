@@ -1,26 +1,14 @@
 <?php
 
-use Env\Conn;
+namespace Models;
 
-class EmpresaModel {
+use Models\BaseModels;
 
-    private $conn;
-    private $id_empresa;
+class EmpresaModels extends BaseModels {
 
-    public function empresa ($conn, $id_empresa)
-    {
-       $this->conn = $conn;
-       $this->id_empresa = $id_empresa;
+    private $tabela = 'empresas';
+    private $coluna = [
+        'fantasia', 'contato'
+    ];
 
-       $sql = "SELECT * FROM empresas WHERE id_empresas = {$this->id_empresa}";
-
-       $stmt= $this->conn->conectar()->prepare($sql);
-
-       $stmt->execute();
-
-       $empresas = $stmt->fetch(\PDO::FETCH_ASSOC);
-       
-        return $empresas;
-      
-    }
 }

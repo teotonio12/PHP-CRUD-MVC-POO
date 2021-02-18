@@ -10,8 +10,8 @@ $dir = __DIR__."/Controllers/";
  *  e o $value o caminho do arquivo
  */
 $router = [
-    'contato/' => 'ContatoController.php',
-    'empresa/' => 'EmpresaController.php'
+    'empresa/' => 'EmpresaController.php',
+    'crud/' => 'CrudControllers.php'
 ];
 
 //verifica se o url informada tem uma rota definida se tiver passa a rota se não passa a rota não encontrada

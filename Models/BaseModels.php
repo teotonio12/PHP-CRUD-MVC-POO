@@ -1,27 +1,34 @@
 <?php
 
-class BaseController
+namespace Models;
+
+use Config\Conn;
+
+class BaseModels extends Conn
 {
-    private $host;
-    private $dbname;
-	private $user;
-	private $senha;
 
-    public function __construct()
+    public function create ($dados) :bool
     {
-        $this->host = HOST;
-        $this->dbname = DBNAME;
-        $this->user = USER;
-        $this->senha = SENHA;
-
+        return true;
     }
 
-    public function Conn()
+    public function update ($dados) :bool
     {
-        try{
-            return new \PDO("mysql:host=$this->host;dbname=$this->dbname","$this->user","$this->senha");
-        } catch(\PDOException $e){
-            echo $e->getMessage();
-        }
+        return true;
+    }
+
+    public function delete ($dados) :bool
+    {
+        return true;
+    }
+
+    public function listAll ($dados) :bool
+    {
+        return true;
+    }
+
+    public function ListShow ($dados) :bool
+    {
+        return true;
     }
 }
