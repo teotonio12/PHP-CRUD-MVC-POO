@@ -2,6 +2,19 @@
 
 namespace Controllers;
 
-use Models\UserModels;
+use Models\UserModel;
+use Controllers\Controllers;
 
-$userModels = new UserModels();
+require "Models/UserModel.php";
+
+#recebe os dados para cadastrar
+$dados = [
+    '100',
+    'Renan Teotonio',
+    'descricao',
+    'teste@teste.com'
+];
+
+$userModels = new UserModel();
+
+echo $userModels->$metodo($userModels->tabela,$userModels->colunas,$dados);

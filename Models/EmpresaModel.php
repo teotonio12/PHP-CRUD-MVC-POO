@@ -4,11 +4,14 @@ namespace Models;
 
 use Models\BaseModels;
 
-class EmpresaModels extends BaseModels {
+require "Models/BaseModels.php";
 
-    private $tabela = 'empresas';
-    private $coluna = [
-        'fantasia', 'contato'
+class EmpresaModel extends BaseModels 
+{
+
+    public $tabela = 'empresas';
+    public $colunas = [
+        'id_empresas','razao','cnpj', 'contato'
     ];
 
 }

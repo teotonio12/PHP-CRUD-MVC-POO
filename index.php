@@ -3,6 +3,10 @@
 //pega a rota informa, caso não tenha sido set o index.php
 $url = (isset($_GET['url'])) ? $_GET['url'] : 'index.php';
 
+$uri = explode('/', $url); 
+
+$controller = $uri[0];
+
 $dir = __DIR__."/Controllers/";
 
 /** define todas as rotas 
@@ -10,12 +14,15 @@ $dir = __DIR__."/Controllers/";
  *  e o $value o caminho do arquivo
  */
 $router = [
-    'empresa/' => 'EmpresaController.php',
-    'crud/' => 'CrudControllers.php'
+    'empresa' => 'EmpresaControllers@create',
+    'user' => 'UserControllers@create'
 ];
 
+
+global $rota;
+
 //verifica se o url informada tem uma rota definida se tiver passa a rota se não passa a rota não encontrada
-$controller = array_key_exists ( $url ,$router ) ?  $dir.$router[$url] :  "404.php";
+$rota = array_key_exists ( $controller ,$router ) ?  $router[$controller] :  "404.php";
 
 //chama a rota
-require $controller;
+require "boostrap/app.php";

@@ -4,31 +4,34 @@ namespace Models;
 
 use Config\Conn;
 
+require "Config/config.php";
+
 class BaseModels extends Conn
 {
 
-    public function create ($dados) :bool
+
+    public function create (string $tabela, array $colunas ,array $dados) 
     {
-        return true;
+        return " usuario cadastrado com sucesso";
     }
 
-    public function update ($dados) :bool
+    public function update ($dados) 
     {
-        return true;
+
     }
 
-    public function delete ($dados) :bool
+    public function delete ($dados) 
     {
-        return true;
+        
     }
 
-    public function listAll ($dados) :bool
+    public function listAll ($dados) 
     {
-        return true;
+        
     }
 
-    public function ListShow ($dados) :bool
+    public function ListShow ($dados) 
     {
-        return true;
+      
     }
 }
