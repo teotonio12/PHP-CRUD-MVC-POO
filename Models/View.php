@@ -1,8 +1,6 @@
 <?php
 
 class View {
-
-    private $variaveis;
     
     public function renderView ( array $variaveis, string $namespaceView)
     { 

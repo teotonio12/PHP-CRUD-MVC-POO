@@ -11,4 +11,10 @@ class ContatoModel {
             'email' => 'teste@teste.com'
         ];
     }
+
+}
+
+class ClassName extends ContatoModel
+{
+    
 }

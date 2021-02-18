@@ -10,7 +10,6 @@ $dir = __DIR__."/Controllers/";
  *  e o $value o caminho do arquivo
  */
 $router = [
-    'teste/' => 'TesteControllers.php',
     'contato/' => 'ContatoController.php',
     'empresa/' => 'EmpresaController.php'
 ];
