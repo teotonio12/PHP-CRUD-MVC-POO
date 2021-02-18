@@ -1,6 +1,6 @@
 <?php
 
-require "App/Config/config.php";
+require "Config/config.php";
 
 class BaseModels extends Conn
 {
