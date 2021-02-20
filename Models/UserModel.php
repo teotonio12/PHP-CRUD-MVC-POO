@@ -1,6 +1,6 @@
 <?php
 
-require "Models/BaseModels.php";
+require "../Models/BaseModels.php";
 
 class UserModel extends BaseModels
 {

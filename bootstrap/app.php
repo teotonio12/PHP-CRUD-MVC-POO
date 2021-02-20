@@ -1,22 +1,34 @@
 <?php
 
-$uri = explode('@',$rota);
+        //$rota == '404.php' ? require "../404.php" : '';
 
-$file = $uri[0].".php";
-//usar expressão regular de traz para frente de @ até barra
+        if ($rota == '404.php') {
+            require "../404.php";
+            die;
+        }
 
-$pastaClass = $uri[0];
-$metodo = $uri[1];
+        $uri = explode('@',$rota);
+
+        $file = $uri[0].".php";
+
+        $pastaClass = $uri[0];
+        $metodo = $uri[1];
 
 
-$pastaClass = explode("\\", $pastaClass);
+        $pastaClass = explode("\\", $pastaClass);
 
-$pasta = $pastaClass[0];
-$class = $pastaClass[1];
+        $pasta = $pastaClass[0];
+        $class = $pastaClass[1];
+
+
+        
 
 
 require $file;
 
+        $objClass = new $class();   
+
+        $objClass->$metodo();
 
 // $requestEmpresa = [
 //     '100',
@@ -36,8 +48,6 @@ require $file;
 
 //$request = new Request();
 
-$objClass = new $class();
 
-$objClass->$metodo();
 
 

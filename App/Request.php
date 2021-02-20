@@ -6,19 +6,21 @@ class Request
     public function __construct() 
     {
         $this->server = $_SERVER;
-        $this->InstAtributos();
+        $this->createdAttributes();
     }
 
-    public function requestToArray ()
+    public function queryStringToArray ()
     {
-        $array = isset($_GET) ? $_GET : $array = isset($_POST) ? $_POST : [];
+
+            $array = isset($_GET) ? $_GET : $array = isset($_POST) ? $_POST : [];
+        
 
         return $array;
     }
 
-    public function InstAtributos()
+    public function createdAttributes()
     {
-        $atributoValue = $this->requestToArray();
+        $atributoValue = $this->queryStringToArray();
 
         foreach ($atributoValue as $key => $value) {
             $this->$key = $value;
@@ -32,15 +34,29 @@ class Request
         return $verbo;
     }
 
+    public function getUri()
+    {
+      
+        preg_match('/.*(?=\/)|.*(?=\/\?)|.*/',$this->server['REQUEST_URI'], $arrayUri);  
+        //print_r($arrayUri);
+        return $arrayUri;
+            
+    }
+
 
 }
 
-// $request = new Request ();
+ 
 
-// echo "<pre>";
-// var_dump($request->requestToArray());
+//  echo "<pre>";
+//  var_dump($request->queryStringToArray());
 
-// echo "Objeto instanciado ".$request->nome_pessoa."<br>";
+//  echo "Objeto instanciado ".$request->nome_pessoa."<br>";
 
-// echo "verbo da requisição = ".$request->getVerbsRequest();
+//  echo "verbo da requisição = ".$request->getVerbsRequest();
+
+
+
+
+
 

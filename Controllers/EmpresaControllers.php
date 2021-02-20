@@ -1,7 +1,7 @@
 <?php
 
-require "Models/EmpresaModel.php";
-require "App/CreateSql.php";
+require "../Models/EmpresaModel.php";
+require "../App/CreateSql.php";
 
 class EmpresaControllers extends CreateSql
 {

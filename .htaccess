@@ -2,5 +2,5 @@
 RewriteEngine On
 Rewritecond %{REQUEST_FILENAME} !-f
 Rewritecond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php?url=$1
-#RewriteRule ^(.*)$ index.php
+#RewriteRule ^(.*)$ index.php?url=$1
+RewriteRule ^(.*)$ index.php

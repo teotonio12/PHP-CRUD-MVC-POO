@@ -1,6 +1,6 @@
 <?php
 
-require "Models/UserModel.php";
+require "../Models/UserModel.php";
 
 class UserControllers 
 {
@@ -12,28 +12,28 @@ class UserControllers
         $this->userModels = new UserModel();
     }
 
-    public function create($request)
+    public function create()
     {  
-        echo $this->userModels->create($this->userModels->tabela,$this->userModels->colunas,$request);
+        echo $this->userModels->create();
     }
 
-    public function update($request)
+    public function update()
     {
-        echo $this->userModels->update($this->userModels->tabela,$this->userModels->colunas,$request);
+        echo $this->userModels->update();
     }
 
-    public function delete($request)
+    public function delete()
     {
-        echo $this->userModels->delete($this->userModels->tabela,$this->userModels->colunas,$request);
+        echo $this->userModels->delete();
     }
 
-    public function listAll($request)
+    public function listAll()
     {
-        echo $this->userModels->listAll($this->userModels->tabela,$this->userModels->colunas,$request);
+        echo $this->userModels->listAll();
     }
 
-    public function listShow($request)
+    public function listShow()
     {
-        echo $this->userModels->listShow($this->userModels->tabela,$this->userModels->colunas,$request);
+        echo $this->userModels->listShow();
     }
 }

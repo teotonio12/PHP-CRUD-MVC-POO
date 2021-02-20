@@ -1,6 +1,6 @@
 <?php
 
-require "Models/BaseModels.php";
+require "../Models/BaseModels.php";
 
 class EmpresaModel extends BaseModels 
 {

@@ -1,7 +1,7 @@
 <?php
 
 //configuração de acesso ao banco de dados
-require "env.php";
+require "../env.php";
 
 class Conn {
 
