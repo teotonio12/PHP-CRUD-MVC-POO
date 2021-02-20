@@ -13,31 +13,29 @@ class EmpresaControllers extends CreateSql
         $this->empresaModels = new EmpresaModel();
     }
 
-    public function create($request)
+    public function create()
     {  
-        $sql = $this->sqlCreate($this->empresaModels->tabela,$this->empresaModels->colunas); 
-
-        echo $this->empresaModels->create($sql ,$request);
+        echo $this->empresaModels->create();
     }
 
-    public function update($request)
+    public function update()
     {
-        echo $this->empresaModels->update($this->empresaModels->tabela,$this->empresaModels->colunas,$request);
+        echo $this->empresaModels->update();
     }
 
-    public function delete($request)
+    public function delete()
     {
-        echo $this->empresaModels->delete($this->empresaModels->tabela,$this->empresaModels->colunas,$request);
+        echo $this->empresaModels->delete();
     }
 
-    public function listAll($request)
+    public function listAll()
     {
-        echo $this->empresaModels->listAll($this->empresaModels->tabela,$this->empresaModels->colunas,$request);
+        echo $this->empresaModels->listAll();
     }
 
-    public function listShow($request)
+    public function listShow()
     {
-        echo $this->empresaModels->listShow($this->empresaModels->tabela,$this->empresaModels->colunas,$request);
+        echo $this->empresaModels->listShow();
     }
 
 }

@@ -4,7 +4,12 @@ class CreateSql
 {
     
     protected function sqlCreate( string $tabela, array $colunas){
-        return "sqlCreate";
+        
+        $sql = "INSERT INTO `empresas` (`razao`, `cnpj`, `contato`) 
+        VALUES ('dgsgf', 'fdgdfgdf', 'dfgdfgfd');
+        ";
+        
+        return $sql;
     }
 
     protected function sqlUpdate( string $tabela, array $colunas){

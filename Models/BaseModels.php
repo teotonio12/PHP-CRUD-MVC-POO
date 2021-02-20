@@ -5,27 +5,27 @@ require "Config/config.php";
 class BaseModels extends Conn
 {
 
-    public function create (string $sql, array $request) 
+    public function create () 
     {
         return "cadastrado com sucesso";
     }
 
-    public function update (string $sql, array $request) 
+    public function update () 
     {
         return "atualizado com sucesso";
     }
 
-    public function delete (string $sql, array $request) 
+    public function delete () 
     {
         return "deletado com sucesso";
     }
 
-    public function listAll (string $sql, array $request) 
+    public function listAll () 
     {
         return "listagem de todos";
     }
 
-    public function ListShow (string $sql, array $request) 
+    public function ListShow () 
     {
         return "listagem de 1";
     }

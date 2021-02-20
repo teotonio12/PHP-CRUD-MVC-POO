@@ -1,5 +1,8 @@
 <?php
 
+
+require "App/Request.php";
+
 //pega a rota informa, caso não tenha sido set o index.php
 $url = (isset($_GET['url'])) ? $_GET['url'] : 'index.php';
 
@@ -7,23 +10,21 @@ $uri = explode('/', $url);
 
 $controller = $uri[0];
 
-$dir = __DIR__."/Controllers/";
-
 /** define todas as rotas 
  *  sendo a $key a url informada
  *  e o $value o caminho do arquivo
  */
 $router = [
-    'empresa-create' =>   'EmpresaControllers@create',
-    'empresa-delete' =>   'EmpresaControllers@delete',
-    'empresa-update' =>   'EmpresaControllers@update',
-    'empresa-listall' =>  'EmpresaControllers@listAll',
-    'empresa-listshow' => 'EmpresaControllers@listShow',
-    'user-create' =>      'UserControllers@create',
-    'user-delete' =>      'UserControllers@delete',
-    'user-update' =>      'UserControllers@update',
-    'user-listall' =>     'UserControllers@listAll',
-    'user-listshow' =>    'UserControllers@listShow'
+    'empresa-create' =>   'Controllers\EmpresaControllers@create',
+    'empresa-delete' =>   'Controllers\EmpresaControllers@delete',
+    'empresa-update' =>   'Controllers\EmpresaControllers@update',
+    'empresa-listall' =>  'Controllers\EmpresaControllers@listAll',
+    'empresa-listshow' => 'Controllers\EmpresaControllers@listShow',
+    'user-create' =>      'Controllers\UserControllers@create',
+    'user-delete' =>      'Controllers\UserControllers@delete',
+    'user-update' =>      'Controllers\UserControllers@update',
+    'user-listall' =>     'Controllers\UserControllers@listAll',
+    'user-listshow' =>    'Controllers\UserControllers@listShow'
 ];
 
 
